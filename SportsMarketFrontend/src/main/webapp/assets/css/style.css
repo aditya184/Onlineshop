@@ -10,6 +10,10 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	background:#fff;
 }
+.dataTableImg{
+	width:100px;
+	height:100px;
+}
 body a{
     transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -4352,4 +4356,5 @@ li.home a img {
 	li.home a img {
 		margin: 0 0 4px 0px;
 	}
+	
 }

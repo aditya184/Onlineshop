@@ -10,7 +10,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="${img}/carousel1.jpg" alt="" width="100%">
+      <img src="${img}/carousel1.jpg" alt="" width="100%" height="100%">
       
       </div>
 
@@ -21,10 +21,8 @@
     <div class="item">
       <img src="${img}/carousel3.jpg" alt="" width="100%">
     </div>
-      <div class="item">
-      <img src="${img}/carousel4.jpg" alt="" width="100%">
+      
     </div>
-  </div>
 
   <!-- Left and right controls -->
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -37,7 +35,6 @@
   </a>
 </div>
 
-	
     	<div class="content">
 		<div class="container">
 		

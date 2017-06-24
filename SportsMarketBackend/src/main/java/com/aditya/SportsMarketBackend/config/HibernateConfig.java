@@ -21,8 +21,8 @@ public class HibernateConfig {
 	private final static String DB_URL="jdbc:h2:tcp://localhost/~/eshop";
 	private final static String DB_DRIVER="org.h2.Driver";
 	private final static String DB_DIALECT="org.hibernate.dialect.H2Dialect";
-	private final static String DB_USERNAME="Aditya";
-	private final static String DB_PASSWORD="aditya";
+	private final static String DB_USERNAME="sa";
+	private final static String DB_PASSWORD="";
 	
 	@Bean
 	public DataSource getDataSource(){

@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.aditya.SportsMarketBackend.dao.ProductDAO;
 import com.aditya.SportsMarketBackend.dto.Product;
 
+
+
 @Controller
 @RequestMapping("/json/data")
-public class JsonDataController {
+public class JsonDataController
+{
 
 	@Autowired
 	private ProductDAO productDAO;
@@ -27,7 +30,8 @@ public class JsonDataController {
 	
 	@RequestMapping("/category/{id}/products")
 	@ResponseBody
-	public List<Product> getProductsByCategory(@PathVariable int id){
+	public List<Product> getProductsByCategory(@PathVariable int id)
+	{
 		
 		return productDAO.listActiveProductsByCategory(id);
 	}

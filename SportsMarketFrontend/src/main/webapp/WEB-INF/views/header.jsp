@@ -12,8 +12,11 @@
   <div class="container-fluid">
     
     <ul class="nav navbar-nav">
+    
       <li id="home"><a href="${contextRoot}/home">Home</a></li>
-            <li id="products"><a href="${contextRoot}/show/all/products">Products</a></li>
+            <li id="listProducts">
+            <a href="${contextRoot}/show/all/products">Products</a>
+            </li>
         
         <%@include file="dropdown.jsp" %>
            
@@ -28,14 +31,6 @@
   </div>
 </nav>
 
- <!-- div class=col-md-2>
-
-          <div class="row">
-          
-                <%@include file="sidebar.jsp" %>
-          
-            </div>
-            </div-->
 
     
 
