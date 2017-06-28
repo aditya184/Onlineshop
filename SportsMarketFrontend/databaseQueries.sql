@@ -79,3 +79,35 @@ VALUES ('PRDTSHOE123', 'Tennis Shoe', 'Head', 'This is one of the best Tennis sh
 
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDTRACQUET123', 'Nadal Tennis Racquet', 'Babolat', 'This is one of the best Tennis Racquet', 2500, 2, true, 3, 2 );
+
+
+CREATE TABLE address (
+	id IDENTITY,
+	user_id int,
+	address_line_one VARCHAR(100),
+	address_line_two VARCHAR(100),
+	city VARCHAR(20),
+	state VARCHAR(20),
+	country VARCHAR(20),
+	postal_code VARCHAR(10),
+	is_billing BOOLEAN,
+	is_shipping BOOLEAN,
+	CONSTRAINT fk_address_user_id FOREIGN KEY (user_id ) REFERENCES user_detail (id),
+	CONSTRAINT pk_address_id PRIMARY KEY (id)
+);
+
+
+CREATE TABLE cart (
+	id IDENTITY,
+	user_id int,
+	grand_total DECIMAL(10,2),
+	cart_lines int,
+	CONSTRAINT fk_cart_user_id FOREIGN KEY (user_id ) REFERENCES user_detail (id),
+	CONSTRAINT pk_cart_id PRIMARY KEY (id)
+);
+
+INSERT INTO address( user_id, address_line_one, address_line_two, city, state, country, postal_code, is_billing, is_shipping) 
+VALUES (1, '128 Audumber Apartment, Cornation Road,', 'Near HDFC Bank ', 'Thane', 'Maharastra', 'India', '123456', true, false );
+INSERT INTO cart (user_id, grand_total, cart_lines) VALUES (null, 0, 0);
+
+

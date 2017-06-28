@@ -17,10 +17,11 @@
             <li id="listProducts">
             <a href="${contextRoot}/show/all/products">Products</a>
             </li>
-        
+            
         <%@include file="dropdown.jsp" %>
            
-                 
+           <li id="manageProducts">
+        <a href="${contextRoot}/manage/products">Manage Products</a></li>             
         <li id="contact">
         <a href="${contextRoot}/contact">Contact</a></li>
     </ul>

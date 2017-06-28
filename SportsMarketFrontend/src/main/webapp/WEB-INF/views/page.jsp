@@ -20,14 +20,15 @@ window.contextRoot='${contextRoot}';
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->    
-
+<script src="${js}/bootstrap.js"></script>
 <!-- Custom Theme files -->
 <link href="${css}/style.css" rel="stylesheet" type="text/css" media="all" />
 
 <link href="${css}/bootstrap.css" rel='stylesheet' type='text/css' />
 
-<link href="${css}/myapp.css" rel='stylesheet' type='text/css' />
+
 <link href="${css}/dataTables.bootstrap.css" rel='stylesheet' type='text/css' />
+
 
 
 <!-- Custom Theme files -->
@@ -35,27 +36,21 @@ window.contextRoot='${contextRoot}';
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-
-
- 
-
-
-
-
-  <script src="${js}/bootstrap.js"></script>
+  
   <script src="${js}/responsiveslides.min.js"></script>
   
 <script src="${js}/jquery.easydropdown.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="${js}/jquery.validate.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="${js}/myapp.js"></script>
-
 
  <script src="${js}/jquery.dataTables.js"></script>
 <script src="${js}/dataTables.bootstrap.js"></script>
-
-  
+<script src="${js}/bootbox.min.js"></script>
+<script src="${js}/myapp.js"></script>
+<link href="${css}/myapp.css" rel='stylesheet' type='text/css' />  
+ 
 	 
   
   
@@ -136,6 +131,12 @@ window.contextRoot='${contextRoot}';
 	<c:if test="${userClickShowProduct==true}">
 	<%@include file="singleproduct.jsp" %>
 	</c:if>	
+	
+	<c:if test="${userClickManageProducts==true}">
+	<%@include file="manageProducts.jsp" %>
+	</c:if>	
+	
+	
 	
 	<!-- c:if test="${userClickProduct==true }"-->
 	<!--%@include file="products.jsp" %-->
