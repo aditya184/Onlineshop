@@ -1,30 +1,66 @@
 package com.aditya.SportsMarketBackend.dto;
 
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table(name="user_detail")
-public class User {
+public class User implements Serializable {
     
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@NotBlank(message = "Please enter first Name!")	
 	@Column(name="first_name")
 	private String firstName;
+	@NotBlank(message = "Please enter Last Name!")	
 	@Column(name="last_name")
 	private String lastName;
+	@NotBlank(message = "Please enter Email!")	
 	private String email;
+	@NotBlank(message = "Please enter Contact Number!")	
 	@Column(name="contact_number")
 	private String contactNumber;
 	private String role;
+	@NotBlank(message = "Please enter Password!")	
 	private String password;
 	private boolean enabled=true;
+	
+	@Transient
+	private String confirmPassword;
+	
+    public String getConfirmPassword() {
+		return confirmPassword;
+	}
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
+	}
 
+	
+	@OneToOne(mappedBy="user",cascade=CascadeType.ALL)
+    private Cart cart;
+    
+	public Cart getCart() {
+		return cart;
+	}
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
 	
 	
 	public int getId() {

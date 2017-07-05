@@ -42,9 +42,12 @@
 
 			</div>
 
+  
+            <div class="container">
 
-<div class="container">
-
+               <div class="table-responsive">
+               
+               
 					<table id="productListTable"
 						class="table table-striped table-borderd">
 
@@ -71,7 +74,9 @@
 							</tr>
 						</tfoot>
 					</table>
-
+                 </div>
+			
+			
 				</div>
 
 			</div>

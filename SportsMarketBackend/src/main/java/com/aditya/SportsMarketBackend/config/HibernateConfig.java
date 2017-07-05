@@ -24,7 +24,7 @@ public class HibernateConfig {
 	private final static String DB_USERNAME="sa";
 	private final static String DB_PASSWORD="";
 	
-	@Bean
+	@Bean("dataSource")
 	public DataSource getDataSource(){
 		BasicDataSource datasource=new BasicDataSource();
 		
@@ -55,6 +55,7 @@ public class HibernateConfig {
 		properties.put("hibernate.show_sql","true");
 		properties.put("hibernate.fomat_sql","true");
 		
+		properties.put("hibernate.hbm2ddl.auto", "update");
 		
 		return properties;
 	}

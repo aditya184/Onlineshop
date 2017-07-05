@@ -30,18 +30,17 @@ $(function()
 	break;	
 	}
 	
-	/*var products=[
-                    ['1','ABC'],
-                    ['2','ASD'],
-                    ['3','QWE'],
-                    ['4','RTY'],
-                    ['5','BNM'],
-                    ['6','JKL'],
-                    ['7','DFG'],
-                    ['8','YUI'],
-		
-		
- 	];*/	
+	var token = $('meta[name="_csrf"]').attr('content');	
+	var header = $('meta[name="_csrf_header"]').attr('content');	
+	
+	if(token.length > 0 && header.length > 0)
+		{
+		   $(document).ajaxSend(function(e , xhr, options){
+			   
+			  xhr.setRequestHeader(header,token); 
+			   
+		   });
+		}
 	
 	var $table = $('#productListTable');
 
@@ -109,15 +108,21 @@ $(function()
         			      
         			     str += '<a href="'+window.contextRoot+'/show/'+data+'/product" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></a> &#160;';
         			        
+        	    if(userRole == 'ADMIN')
+      		    	 {
+        			   str += '<a href="'+window.contextRoot+'/manage/'+data+'/product" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>'; 	 
+   			    	 }
+        			  else
+        			    {
         			       if(row.quantity < 1)
         			       {
         			    	   str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="glyphicon glyphicon-shopping-cart"></span></a>';        			    	   
         			       }
         			       else
         			       {
-        			    	   str += '<a href="'+window.contextRoot+'/cart/add/'+data+'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';	   
+        			   		   str += '<a href="'+window.contextRoot+'/cart/add/'+data+'/product" class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span></a>';
         			       }
-        			      
+        			    }       			      
           			       return str;
         			      }
         			  
@@ -192,7 +197,7 @@ $(function()
         	},
         	columns: [
         		      {
-        		    	  date:'id'
+        		    	  data:'id'
         		      },
         			  { 
   				       data: 'code',
@@ -221,7 +226,7 @@ $(function()
         			  { 
         				  data: 'unitPrice',
         			      mRender: function(data,type,row){
-        			    	  return '&#8377; '+data
+        			    	  return '&#8377;' +data
         			      }
         			  },
         			 { 
@@ -355,6 +360,54 @@ $(function()
 		    
 		});
 	}	
+
+	
+var $loginForm = $('#loginForm');
+	
+	if($loginForm.length) {
+		
+		$loginForm.validate({
+			
+		    rules : {
+		    	
+		    	username : {
+		    		
+		    		required: true,
+		    		email: true
+		    		
+		    	},
+		    	
+		    	password: {
+		    		
+		    		required: true
+		    	}
+		    },
+		    
+		    messages : {
+		    	
+		    	username : {
+		    		
+		    		required: 'Please enter the username!',
+		    		minlength: 'Please enter the valid email address!'
+		    	},
+		    	
+		    	password: {
+		    		
+		    		required: 'Please enter the password!'
+		    		
+		    	}
+		    	
+		    },
+		    
+		    errorElement: 'em',
+		    errorPlacement: function(error,element){
+		    	
+		    	error.addClass('help-block');
+		    	error.insertAfter(element);
+		    }
+		    
+		});
+	}
 	
 	
 });
