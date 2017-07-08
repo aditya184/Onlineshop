@@ -31,9 +31,9 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <security:authorize access="isAnonymous()">
-      <li id="register"><a href="${contextRoot}/register"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+      <li id="register"><a href="${contextRoot}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
       
-      <li id="login"><a href="${contextRoot}/login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+      <li id="login"><a href="${contextRoot}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </security:authorize>
       
       <security:authorize access="isAuthenticated()">
@@ -51,7 +51,7 @@
            <ul class="dropdown-menu">
               <security:authorize access="hasAuthority('USER')">
                <li>
-                 <a href="${contextRoot}/cart">
+                 <a href="${contextRoot}/cart/${userModel.cart.id}/show">
                      <span class="glyphicon glyphicon-shopping-cart"></span>
                      <span class="badge">${userModel.cart.cartLines}</span>
 					 - &#8377; ${userModel.cart.grandTotal}	

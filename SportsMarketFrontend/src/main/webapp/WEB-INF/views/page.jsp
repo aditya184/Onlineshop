@@ -19,40 +19,41 @@
 window.menu='${title}';
 
 window.contextRoot='${contextRoot}';
-</script>
 
+window.cartId = '${userModel.cart.id}';
+
+</script>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->    
 <script src="${js}/bootstrap.js"></script>
-
 <!-- Custom Theme files -->
 
 
-<link href="${css}/bootstrap-readable-theme.css" rel='stylesheet' type='text/css' />  
-	
 <link href="${css}/bootstrap.css" rel='stylesheet' type='text/css' />
+
+<link href="${css}/bootstrap-readable-theme.css" rel='stylesheet' type='text/css' />  
 
 
 <link href="${css}/dataTables.bootstrap.css" rel='stylesheet' type='text/css' />
 
+<link href="${css}/myapp.css" rel='stylesheet' type='text/css' />  
 
 
 <!-- Custom Theme files -->
-
-  <meta charset="utf-8">
+    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
   
+  <script src="${js}/responsiveslides.min.js"></script>
+  
+<script src="${js}/jquery.easydropdown.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="${js}/jquery.validate.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
  <script src="${js}/jquery.dataTables.js"></script>
-<link href="${css}/myapp.css" rel='stylesheet' type='text/css' />  
-
 <script src="${js}/dataTables.bootstrap.js"></script>
 <script src="${js}/bootbox.min.js"></script>
 <script src="${js}/myapp.js"></script>
@@ -67,7 +68,35 @@ window.contextRoot='${contextRoot}';
   
 
 
- <script language="JavaScript" type="text/javascript">
+
+	<script>
+	window.userRole = '${userModel.role}';
+	window.userEmail = '${userModel.email}';
+	window.userId = '${userModel.id}';
+	</script>
+
+<script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	nav: true,
+      	speed: 500,
+        namespace: "callbacks",
+        pager: true,
+      });
+    });
+</script>
+<script src="${js}/easyResponsiveTabs.js" type="text/javascript"></script>
+		    <script type="text/javascript">
+			    $(document).ready(function () {
+			        $('#horizontalTab').easyResponsiveTabs({
+			            type: 'default', //Types: default, vertical, accordion           
+			            width: 'auto', //auto or any width like 600px
+			            fit: true   // 100% fit in a container
+			        });
+			    });
+</script>
+    <script language="JavaScript" type="text/javascript">
   $(document).ready(function(){
     $('.carousel').carousel({
       interval: 2000
@@ -84,7 +113,6 @@ window.contextRoot='${contextRoot}';
 				});
 			});
 		</script>
-
 
 </head>
 <body>
@@ -113,6 +141,9 @@ window.contextRoot='${contextRoot}';
 	<%@include file="singleproduct.jsp" %>
 	</c:if>	
 	
+	<c:if test="${userClickShowCart == true}"><%@include
+					file="cartitems.jsp"%></c:if>
+					
 	<c:if test="${userClickManageProducts==true}">
 	<%@include file="manageProducts.jsp" %>
 	</c:if>	

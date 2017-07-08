@@ -109,4 +109,30 @@ public class UserDAOImpl implements UserDAO {
 		}
 	}
 
+	@Override
+	public User getById(int userId) {
+		String selectQuery = "FROM User WHERE id = :userId";
+
+		try {
+			return sessionfactory.getCurrentSession().createQuery(selectQuery, User.class).setParameter("userId",userId)
+					.getSingleResult();
+		} catch (Exception ex) {
+			 ex.printStackTrace();
+			return null;
+		}
+	}
+
+	@Override
+	public Cart getCartById(int cartId) {
+		String selectQuery = "FROM Cart WHERE id = :cartId";
+
+		try {
+			return sessionfactory.getCurrentSession().createQuery(selectQuery, Cart.class).setParameter("cartId",cartId)
+					.getSingleResult();
+		} catch (Exception ex) {
+			 ex.printStackTrace();
+			return null;
+		}
+	}
+
 }

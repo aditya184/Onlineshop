@@ -2,6 +2,7 @@ package com.aditya.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,11 +16,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.aditya.SportsMarketBackend.dao.CartLineDAO;
 import com.aditya.SportsMarketBackend.dao.CategoryDAO;
 import com.aditya.SportsMarketBackend.dao.ProductDAO;
+import com.aditya.SportsMarketBackend.dao.UserDAO;
+import com.aditya.SportsMarketBackend.dto.Cart;
+import com.aditya.SportsMarketBackend.dto.CartLine;
 import com.aditya.SportsMarketBackend.dto.Category;
 import com.aditya.SportsMarketBackend.dto.Product;
+import com.aditya.SportsMarketBackend.dto.User;
 import com.aditya.SportsMarketFrontend.exception.ProductNotFoundException;
+import com.aditya.SportsMarketFrontend.model.UserModel;
 
 @Controller
 public class PageController
@@ -32,6 +39,15 @@ public class PageController
 	@Autowired
 	private ProductDAO productDAO;
     
+	@Autowired
+	private CartLineDAO cartLineDAO;
+	
+	@Autowired
+	private UserDAO userDAO;
+	
+	@Autowired
+	private HttpSession session;
+	
     @RequestMapping(value={"/","/home","/index"})
 	public ModelAndView index()
    {
@@ -76,12 +92,17 @@ public class PageController
    }
     
     @RequestMapping(value ="/show/all/products")
-	public ModelAndView showallproducts()
+	public ModelAndView showallproducts(@RequestParam(name = "operation", required = false) String operation)
      {
     	ModelAndView mv = new ModelAndView("page");		
 		mv.addObject("title","All Products");
 		mv.addObject("categories", categoryDAO.list());
 		mv.addObject("userClickAllProducts",true);
+		if (operation != null) {
+			if (operation.equals("cart")) {
+				mv.addObject("message", "Product added to cart sucessfully!!");
+			}
+		}
 		return mv;				
      }
 
@@ -169,4 +190,95 @@ public class PageController
     	}
     	return "redirect:/login?logout";
     }
+    
+    @RequestMapping(value = "/cart/add/{id}/product/for/{userid}")
+	public String addProductToCart(@PathVariable("id") int id, @PathVariable("userid") int userid)
+			throws ProductNotFoundException {
+
+		// product DAO to fetch single category
+		Product product = null;
+		Cart cart = null;
+		int cartId;
+		product = productDAO.get(id);
+		User user = userDAO.getById(userid);
+		cartId = user.getCart().getId();
+		if (product == null)
+			throw new ProductNotFoundException();
+		CartLine cartline = cartLineDAO.ifExists(cartId, product.getId());
+		// If product is new to cart
+		if (cartline == null) {
+			CartLine ncartline = new CartLine();
+			ncartline.setCartId(cartId);
+			ncartline.setProduct(product);
+			ncartline.setBuyingPrice(product.getUnitPrice());
+			ncartline.setAvailable(product.isActive());
+			ncartline.setProductCount(1);
+			ncartline.setTotal(ncartline.getProductCount() * ncartline.getBuyingPrice());
+			cartLineDAO.add(ncartline);
+			// updating cart
+			cart = getCart();
+			cart.setGrandTotal(cart.getGrandTotal() + ncartline.getTotal());
+			cart.setCartLines(cart.getCartLines() + 1);
+			userDAO.updateCart(cart);
+		}
+		// If same product already in cart
+		if (cartline != null) {
+
+			cartline.setBuyingPrice(product.getUnitPrice());
+			cartline.setAvailable(product.isActive());
+			cartline.setProductCount(cartline.getProductCount() +1);
+			cartline.setTotal(cartline.getProductCount() * cartline.getBuyingPrice());
+			cartLineDAO.update(cartline);
+			// updating cart
+			cart = getCart();
+			cart.setGrandTotal(cart.getGrandTotal() + cartline.getTotal());
+			cart.setCartLines(cart.getCartLines() + 1);
+			userDAO.updateCart(cart);
+		}
+
+		// -------------------------
+		return "redirect:/show/all/products?operation=cart";
+	}
+
+	@RequestMapping(value = "/cart/{id}/show")
+	public ModelAndView showCart(@RequestParam(name = "operation", required = false) String operation,@PathVariable("id") int id) {
+		ModelAndView mv = new ModelAndView("page");
+		User user = userDAO.getById(id);
+		int cartId = getCart().getId();
+
+		mv.addObject("title", "Cart Of" + user.getFirstName() + "");
+		// passing list of cart items
+		mv.addObject("cartitems", cartLineDAO.list(cartId));
+		mv.addObject("userClickShowCart", true);
+		if (operation != null) {
+			if (operation.equals("remove")) {
+				mv.addObject("message", "Product removed from cart!!");
+			}
+		}
+		return mv;
+	}
+
+	@RequestMapping(value = "/cart/{id}/remove")
+	public String removeCartLine(@PathVariable("id") int id) {
+		CartLine cartline = cartLineDAO.get(id);
+		// Updating cart
+		Cart cart = null;
+		//cart = userDAO.getCartById(cartline.getCartId());
+		cart = getCart();
+		
+		int userid = cart.getUser().getId();
+		cart.setGrandTotal(cart.getGrandTotal() - cartline.getTotal());
+		cart.setCartLines(cart.getCartLines() - 1);
+		userDAO.updateCart(cart);
+		// Deleting cart item
+		cartLineDAO.remove(cartline);
+		return "redirect:/cart/" + userid + "/show?operation=remove";
+	}
+	
+	
+	private Cart getCart(){
+		
+		return ((UserModel)session.getAttribute("userModel")).getCart();
+		
+	}
 }

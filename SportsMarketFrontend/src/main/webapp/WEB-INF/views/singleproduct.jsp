@@ -73,7 +73,7 @@
                
                <c:otherwise>
                
-                    <a href="${contextRoot}/cart/add/${product.id}/product" class="btn btn-success">
+                    <a href="${contextRoot}/cart/add/${product.id}/product/for/${userModel.id}" class="btn btn-success">
                     <span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart</a>
                         
                </c:otherwise>

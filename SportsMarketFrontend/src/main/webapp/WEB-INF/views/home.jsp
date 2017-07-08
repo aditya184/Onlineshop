@@ -10,7 +10,7 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="${img}/carousel1.jpg" alt="" width="100%" height="100%">
+      <img src="${img}/cricket1.jpg" alt="" width="100%" >
       
       </div>
 
@@ -19,7 +19,7 @@
     </div>
 
     <div class="item">
-      <img src="${img}/carousel3.jpg" alt="" width="100%">
+      <img src="${img}/tennis1.jpg" alt="" width="100%" height="100%">
     </div>
       
     </div>
@@ -51,8 +51,9 @@
 									<ul class="tab_img">
 									  <li>
 										<div class="view view-first">
-					   		  			   <img src="${img}/pic1.jpg" class="img-responsive" alt=""/>
-										   <div class="info1"><h4>hot</h4> </div>
+					   		  			   <img src="${img}/"  width="100%" height="100%"
+					   		  			   class="img-responsive" alt=""/>
+										    
 											 <div class="mask">
 						                        
 								              </div>
@@ -61,17 +62,17 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377; 59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 											
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<li>
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic2.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -85,11 +86,11 @@
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										 
 										</li>
 										<li class="last">
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic3.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -98,16 +99,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  <img src="${img}/" alt="" />
 										</li>
 									    <li>
 									     <div class="view view-first">
-					   		  			   <img src="${img}/pic4.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -116,16 +117,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  <img src="${img}/" alt="" />
 										</li>
 										<li>
 										 <div class="view view-first">
-					   		  			   <img src="${img}/pic12.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -134,16 +135,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  <img src="${img}/" alt="" />
 										</li>
 										<li class="last">
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic6.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -152,12 +153,12 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  <img src="${img}/&#8377;" alt="" />
 										</li>
 										<div class="clearfix"></div>
 									</ul>
@@ -166,7 +167,7 @@
 									<ul class="tab_img">
 									  <li>
 										<div class="view view-first">
-					   		  			   <img src="${img}/pic8.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -175,34 +176,32 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										 
 										</li>
 										<li>
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic7.jpg" class="img-responsive" alt=""/>
-											 <div class="mask">
-						                        <div class="info1"> </div>
-								              </div>
+					   		  			   <img src="${img}/PRD7E584689F9.jpg" class="img-responsive" alt=""/>
+											
 								              <div class="tab_desc">
 											  <div class="tab_desc_1">
-												  <h5>Lorem ipsum dolor</h5>
+												  <h5>SG Gloves</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										 
 										</li>
 										<li class="last">
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic3.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -211,16 +210,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										 
 										</li>
 									    <li>
 									     <div class="view view-first">
-					   		  			   <img src="${img}/pic9.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -234,11 +233,11 @@
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										
 										</li>
 										<li>
 										 <div class="view view-first">
-					   		  			   <img src="${img}/pic12.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -252,11 +251,11 @@
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  <img src="${img}/" alt="" />
 										</li>
 										<li class="last">
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic6.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -265,12 +264,12 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<div class="clearfix"></div>
 									</ul>
@@ -279,7 +278,7 @@
 									<ul class="tab_img">
 									  <li>
 										<div class="view view-first">
-					   		  			   <img src="${img}/pic10.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -288,16 +287,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										
 										</li>
 										<li>
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic2.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -306,16 +305,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<li class="last">
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic3.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -324,16 +323,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 									    <li>
 									     <div class="view view-first">
-					   		  			   <img src="${img}/pic4.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -342,16 +341,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<li>
 										 <div class="view view-first">
-					   		  			   <img src="${img}/pic5.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -360,16 +359,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<li class="last">
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic11.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -378,12 +377,12 @@
 												 <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<div class="clearfix"></div>
 									</ul>
@@ -392,7 +391,7 @@
 									<ul class="tab_img">
 									  <li>
 										<div class="view view-first">
-					   		  			   <img src="${img}/pic10.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -401,16 +400,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<li>
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic2.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -419,16 +418,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<li>
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic9.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -437,16 +436,16 @@
 												 <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 									    <li>
 									     <div class="view view-first">
-					   		  			   <img src="${img}/pic4.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -455,16 +454,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<li>
 										 <div class="view view-first">
-					   		  			   <img src="${img}/pic13.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -473,16 +472,16 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<li class="last">
 										  <div class="view view-first">
-					   		  			   <img src="${img}/pic8.jpg" class="img-responsive" alt=""/>
+					   		  			   <img src="${img}/" class="img-responsive" alt=""/>
 											 <div class="mask">
 						                        <div class="info1"> </div>
 								              </div>
@@ -491,12 +490,12 @@
 												  <h5>Lorem ipsum dolor</h5>
 											  </div>
 											  <div class="tab_desc_2">
-												  <p>$59.95</p>
+												  <p>&#8377;59.95</p>
 											  </div>
 											  <div class="clearfix"></div>
 											  </div>
 										  </div>
-										  <img src="${img}/rating.png" alt="" />
+										  
 										</li>
 										<div class="clearfix"></div>
 									</ul>
